@@ -1,0 +1,221 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "JABIL_FINAL_JDOC360",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZOD_PLM_JDOC_360_SRV": {
+				"uri": "/sap/opu/odata/sap/ZOD_PLM_JDOC_360_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml",
+					"annotations": [
+						"ZOD_PLM_GAP_REPORTS_ANNO_MDL",
+						"ZOD_PLM_SITE_MASTER_LIST_ANNO_MD",
+						"ZOD_PLM_EXTENSION_REPORT_ANNO_MD",
+						"ZOD_PLM_WAIVER_REPORT_ANNO_MDL",
+						"ZOD_PLM_DOCUMENT_TYPE_REPORT_ANN",
+						"ZOD_PLM_DOCUMENT_STATUS_REPORT_A",
+						"ZOD_PLM_PERIODIC_REVIEW_REPORT_A",
+						"ZOD_PLM_DOC_INPROCESS_REPORT_ANN",
+						"ZOD_PLM_CONTROL_COPIES_REPORT_AN",
+						"ZOD_PLM_LINKED_JDOCS_REPORT_ANNO"
+					]
+				}
+			},
+			"ZOD_PLM_GAP_REPORTS_ANNO_MDL": {
+				"uri": "ZOD_PLM_GAP_REPORTS_ANNO_MDL.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_GAP_REPORTS_ANNO_MDL.xml"
+				}
+			},
+			"ZOD_PLM_SITE_MASTER_LIST_ANNO_MD": {
+				"uri": "ZOD_PLM_SITE_MASTER_LIST_ANNO_MD.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_SITE_MASTER_LIST_ANNO_MD.xml"
+				}
+			},
+			"ZOD_PLM_EXTENSION_REPORT_ANNO_MD": {
+				"uri": "ZOD_PLM_EXTENSION_REPORT_ANNO_MD.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_EXTENSION_REPORT_ANNO_MD.xml"
+				}
+			},
+			"ZOD_PLM_WAIVER_REPORT_ANNO_MDL": {
+				"uri": "ZOD_PLM_WAIVER_REPORT_ANNO_MDL.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_WAIVER_REPORT_ANNO_MDL.xml"
+				}
+			},
+			"ZOD_PLM_DOCUMENT_TYPE_REPORT_ANN": {
+				"uri": "ZOD_PLM_DOCUMENT_TYPE_REPORT_ANN.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_DOCUMENT_TYPE_REPORT_ANN.xml"
+				}
+			},
+			"ZOD_PLM_DOCUMENT_STATUS_REPORT_A": {
+				"uri": "ZOD_PLM_DOCUMENT_STATUS_REPORT_A.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_DOCUMENT_STATUS_REPORT_A.xml"
+				}
+			},
+			"ZOD_PLM_PERIODIC_REVIEW_REPORT_A": {
+				"uri": "ZOD_PLM_PERIODIC_REVIEW_REPORT_A.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_PERIODIC_REVIEW_REPORT_A.xml"
+				}
+			},
+			"ZOD_PLM_DOC_INPROCESS_REPORT_ANN": {
+				"uri": "ZOD_PLM_DOC_INPROCESS_REPORT_ANN.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_DOC_INPROCESS_REPORT_ANN.xml"
+				}
+			},
+			"ZOD_PLM_CONTROL_COPIES_REPORT_AN": {
+				"uri": "ZOD_PLM_CONTROL_COPIES_REPORT_AN.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_CONTROL_COPIES_REPORT_AN.xml"
+				}
+			},
+			"ZOD_PLM_LINKED_JDOCS_REPORT_ANNO": {
+				"uri": "ZOD_PLM_LINKED_JDOCS_REPORT_ANNO.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZOD_PLM_LINKED_JDOCS_REPORT_ANNO.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "JABIL_FINAL_JDOC360.view.App",
+			"type": "XML"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "JABIL_FINAL_JDOC360.view",
+				"targetAggregation": "pages",
+				"controlId": "app",
+				"serviceConfig": {
+					"name": "ZOD_PLM_JDOC_360_SRV",
+					"serviceUrl": "/sap/opu/odata/sap/ZOD_PLM_JDOC_360_SRV/"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "mainView",
+					"target": "mainView"
+				},
+				{
+					"pattern": "TableView/{sector}",
+					"name": "TableView",
+					"target": "tableView"
+				}
+			],
+			"targets": {
+				"mainView": {
+					"viewName": "MainView",
+					"viewId": "mainView",
+					"controlId": "app",
+					"controlAggregation": "pages"
+				},
+				"tableView": {
+					"viewName": "TableView",
+					"viewLevel": 1,
+					"viewId": "tableView",
+					"controlId": "app",
+					"controlAggregation": "pages"
+				}
+			}
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.collaboration": {},
+				"sap.m": {},
+				"sap.ui.comp": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "JABIL_FINAL_JDOC360.i18n.i18n"
+				}
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"": {
+				"dataSource": "ZOD_PLM_JDOC_360_SRV",
+				"settings": {
+					"useBatch": false,
+					"defaultCountMode": "Inline"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/z_jabil_jdoc360",
+		"_version": "1.1.0"
+	}
+}

@@ -1,0 +1,144 @@
+{
+    "resources": [
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "ZOD_PLM_WAIVER_REPORT_ANNO_MDL.xml"
+        },
+        {
+            "name": "ZOD_PLM_GAP_REPORTS_ANNO_MDL.xml"
+        },
+        {
+            "name": "ZOD_PLM_PERIODIC_REVIEW_REPORT_A.xml"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "view/TableView.view.xml"
+        },
+        {
+            "name": "view/MainView.view.xml"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "model/formatter.js"
+        },
+        {
+            "name": "extended_runnable_file.html"
+        },
+        {
+            "name": "ZOD_PLM_CONTROL_COPIES_REPORT_AN.xml"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "ZOD_PLM_EXTENSION_REPORT_ANNO_MD.xml"
+        },
+        {
+            "name": "ZOD_PLM_SITE_MASTER_LIST_ANNO_MD.xml"
+        },
+        {
+            "name": "ZOD_PLM_DOCUMENT_TYPE_REPORT_ANN.xml"
+        },
+        {
+            "name": "ZOD_PLM_DOCUMENT_STATUS_REPORT_A.xml"
+        },
+        {
+            "name": "canvg.js"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "ZOD_PLM_DOC_INPROCESS_REPORT_ANN.xml"
+        },
+        {
+            "name": "fragments/GapAssessmentReport.fragment.xml"
+        },
+        {
+            "name": "fragments/MasterListReport.fragment.xml"
+        },
+        {
+            "name": "fragments/TableInProcessChart.fragment.xml"
+        },
+        {
+            "name": "fragments/ControlledCopiesReportOld.fragment.xml"
+        },
+        {
+            "name": "fragments/FiltersPeriodicReview.fragment.xml"
+        },
+        {
+            "name": "fragments/ExtensionRequestReport.fragment.xml"
+        },
+        {
+            "name": "fragments/FiltersDocumentTypes.fragment.xml"
+        },
+        {
+            "name": "fragments/CollaboratorListDialogDraft.fragment.xml"
+        },
+        {
+            "name": "fragments/PersonalisationDialogForControlledCopies.fragment.xml"
+        },
+        {
+            "name": "fragments/FiltersInProcessTasks.fragment.xml"
+        },
+        {
+            "name": "fragments/TableDocTypeChart.fragment.xml"
+        },
+        {
+            "name": "fragments/WaiverReport.fragment.xml"
+        },
+        {
+            "name": "fragments/LinkedDocumentsReport.fragment.xml"
+        },
+        {
+            "name": "fragments/FiltersDocumentStatus.fragment.xml"
+        },
+        {
+            "name": "fragments/ControlledCopiesReport.fragment.xml"
+        },
+        {
+            "name": "fragments/ErrorHandlingFilter.fragment.xml"
+        },
+        {
+            "name": "fragments/TablePeriodicReview.fragment.xml"
+        },
+        {
+            "name": "fragments/TableDocStatusChart.fragment.xml"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "controller/MainView.controller.js"
+        },
+        {
+            "name": "controller/TableView.controller.js"
+        },
+        {
+            "name": "ZOD_PLM_LINKED_JDOCS_REPORT_ANNO.xml"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

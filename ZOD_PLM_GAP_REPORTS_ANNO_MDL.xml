@@ -1,0 +1,129 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="http://sapgw-dev.jabil.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='ECC')/$value">
+		<edmx:Include Namespace="Org.OData.Core.V1"/>
+	</edmx:Reference>
+	<edmx:Reference
+		Uri="http://sapgw-dev.jabil.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='ECC')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.Communication.v1"/>
+	</edmx:Reference>
+	<edmx:Reference
+		Uri="http://sapgw-dev.jabil.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='ECC')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:Reference
+		Uri="http://sapgw-dev.jabil.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='ECC')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://sap/opu/odata/SAP/ZOD_PLM_JDOC_360_SRV/$metadata">
+		<edmx:Include Namespace="ZOD_PLM_JDOC_360_SRV"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zod_plm_gap_reports_anno_mdl.v1">
+			<!--<Annotations Target="ZOD_PLM_JDOC_360_SRV.GapReports">
+				<Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
+					<Collection>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="CorporateFunction"/>
+							<PropertyValue Property="Value" Path="CorporateFunction"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="GlobalDocNo"/>
+							<PropertyValue Property="Value" Path="GlobalDocNo"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="GlobalDocRev"/>
+							<PropertyValue Property="Value" Path="GlobalDocRev"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="GlobalDocTitle"/>
+							<PropertyValue Property="Value" Path="GlobalDocTitle"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="DocReleaseDate"/>
+							<PropertyValue Property="Value" Path="DocReleaseDate"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Site"/>
+							<PropertyValue Property="Value" Path="Site"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Region"/>
+							<PropertyValue Property="Value" Path="Region"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="SiteQse"/>
+							<PropertyValue Property="Value" Path="SiteQse"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="GapAnalysisNo"/>
+							<PropertyValue Property="Value" Path="GapAnalysisNo"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="GapStartDate"/>
+							<PropertyValue Property="Value" Path="GapStartDate"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="GapAnalysisStatus"/>
+							<PropertyValue Property="Value" Path="GapAnalysisStatus"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="GapDueDate"/>
+							<PropertyValue Property="Value" Path="GapDueDate"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="CurrentStep"/>
+							<PropertyValue Property="Value" Path="CurrentStep"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="PendingWidth"/>
+							<PropertyValue Property="Value" Path="PendingWidth"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>-->
+			<Annotations Target="ZOD_PLM_JDOC_360_SRV.GapReports/Site">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record Type="com.sap.vocabularies.Common.v1.ValueListType">
+						<PropertyValue Property="Label" String="Site"/>
+						<PropertyValue Property="CollectionPath" String="SrchHelpSiteSet"/>
+						<PropertyValue Property="CollectionRoot" String=""/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="SiteId"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="Site"/>
+								</Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="SiteName"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="ZOD_PLM_JDOC_360_SRV.GapReports/GlobalDocNo">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record Type="com.sap.vocabularies.Common.v1.ValueListType">
+						<PropertyValue Property="Label" String="GlobalDocNo"/>
+						<PropertyValue Property="CollectionPath" String="SrchHelpGlobalDocSet"/>
+						<PropertyValue Property="CollectionRoot" String=""/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="JdocNumber"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="GlobalDocNo"/>
+								</Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="JdocRevision"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

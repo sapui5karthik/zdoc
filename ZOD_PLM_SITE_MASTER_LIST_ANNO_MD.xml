@@ -1,0 +1,247 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="http://sapgw-dev.jabil.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='ECC')/$value">
+		<edmx:Include Namespace="Org.OData.Core.V1"/>
+	</edmx:Reference>
+	<edmx:Reference
+		Uri="http://sapgw-dev.jabil.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='ECC')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:Reference
+		Uri="http://sapgw-dev.jabil.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='ECC')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.Communication.v1"/>
+	</edmx:Reference>
+	<edmx:Reference
+		Uri="http://sapgw-dev.jabil.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='ECC')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://sap/opu/odata/SAP/ZOD_PLM_JDOC_360_SRV/$metadata">
+		<edmx:Include Namespace="ZOD_PLM_JDOC_360_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs02/vocabularies/Org.OData.Aggregation.V1.xml">
+		<edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Capabilities.V1.xml">
+		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Measures.V1.xml">
+		<edmx:Include Alias="CQP" Namespace="Org.OData.Measures.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Authorization.V1.xml">
+		<edmx:Include Alias="Auth" Namespace="Org.OData.Authorization.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
+		<edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zod_plm_site_master_list_anno_md.v1">
+			<!--<Annotations Target="ZOD_PLM_JDOC_360_SRV.SiteMasterListReport">
+				<Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
+					<Collection>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="JdocNumber"/>
+							<PropertyValue Property="Value" Path="JdocNumber"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="JdocRevision"/>
+							<PropertyValue Property="Value" Path="JdocRevision"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="JdocVersion"/>
+							<PropertyValue Property="Value" Path="JdocVersion"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="JdocStatus"/>
+							<PropertyValue Property="Value" Path="JdocStatus"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="JdocTitle"/>
+							<PropertyValue Property="Value" Path="JdocTitle"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="SiteId"/>
+							<PropertyValue Property="Value" Path="SiteId"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="TypeId"/>
+							<PropertyValue Property="Value" Path="TypeId"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="SubType"/>
+							<PropertyValue Property="Value" Path="SubType"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Department"/>
+							<PropertyValue Property="Value" Path="Department"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="DeleteFlag"/>
+							<PropertyValue Property="Value" Path="DeleteFlag"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="CorpSiteFunction"/>
+							<PropertyValue Property="Value" Path="CorpSiteFunction"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String=""/>
+							<PropertyValue Property="Value" Path=""/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="AuthorId"/>
+							<PropertyValue Property="Value" Path="AuthorId"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="OwnerId"/>
+							<PropertyValue Property="Value" Path="OwnerId"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="PreviousNumber"/>
+							<PropertyValue Property="Value" Path="PreviousNumber"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="PublishToPdf"/>
+							<PropertyValue Property="Value" Path="PublishToPdf"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Customer"/>
+							<PropertyValue Property="Value" Path="Customer"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="ConfidentialFlag"/>
+							<PropertyValue Property="Value" Path="ConfidentialFlag"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="QmsCoreProc"/>
+							<PropertyValue Property="Value" Path="QmsCoreProc"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="QmsFirstLevel"/>
+							<PropertyValue Property="Value" Path="QmsFirstLevel"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="QmsSecondLevel"/>
+							<PropertyValue Property="Value" Path="QmsSecondLevel"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Workcell"/>
+							<PropertyValue Property="Value" Path="Workcell"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="ChangeDescription"/>
+							<PropertyValue Property="Value" Path="ChangeDescription"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="ExtDocNo"/>
+							<PropertyValue Property="Value" Path="ExtDocNo"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="ExtDocRev"/>
+							<PropertyValue Property="Value" Path="ExtDocRev"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="CreatedDate"/>
+							<PropertyValue Property="Value" Path="CreatedDate"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="NextReviewDate"/>
+							<PropertyValue Property="Value" Path="NextReviewDate"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="ReleaseDate"/>
+							<PropertyValue Property="Value" Path="ReleaseDate"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="EffectiveDate"/>
+							<PropertyValue Property="Value" Path="EffectiveDate"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="ExpirationDate"/>
+							<PropertyValue Property="Value" Path="ExpirationDate"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field01"/>
+							<PropertyValue Property="Value" Path="Field01"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field02"/>
+							<PropertyValue Property="Value" Path="Field02"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field03"/>
+							<PropertyValue Property="Value" Path="Field03"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field04"/>
+							<PropertyValue Property="Value" Path="Field04"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field05"/>
+							<PropertyValue Property="Value" Path="Field05"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field06"/>
+							<PropertyValue Property="Value" Path="Field06"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field07"/>
+							<PropertyValue Property="Value" Path="Field07"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field08"/>
+							<PropertyValue Property="Value" Path="Field08"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field09"/>
+							<PropertyValue Property="Value" Path="Field09"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Field10"/>
+							<PropertyValue Property="Value" Path="Field10"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="MainFile"/>
+							<PropertyValue Property="Value" Path="MainFile"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="TitleDesc"/>
+							<PropertyValue Property="Value" Path="TitleDesc"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="Notes"/>
+							<PropertyValue Property="Value" Path="Notes"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="ReasonForChange"/>
+							<PropertyValue Property="Value" Path="ReasonForChange"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Label" String="VersionComments"/>
+							<PropertyValue Property="Value" Path="VersionComments"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>-->
+			<Annotations Target="ZOD_PLM_JDOC_360_SRV.SiteMasterListReport/SiteId">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record Type="com.sap.vocabularies.Common.v1.ValueListType">
+						<PropertyValue Property="Label" String="SiteId"/>
+						<PropertyValue Property="CollectionPath" String="SrchHelpGlbSiteSet"/>
+						<PropertyValue Property="CollectionRoot" String=""/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="SiteId"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="SiteId"/>
+								</Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="SiteName"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
